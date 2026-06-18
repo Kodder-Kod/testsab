@@ -656,22 +656,22 @@ const Orders = () => {
 
 
 
-      /// Maintain the total function
-      const calculateTotal = (cart) => {
-          if (!cart || cart.length === 0) {
-              return 0;
-          }
-          return cart.reduce((sum, item) => sum + (item.stock * item.Price), 0);
-      };
-  
-      useEffect(() => {
-          setTotal(calculateTotal(cart));
-      }, [cart]);
+  /// Maintain the total function
+  const calculateTotal = (cart) => {
+    if (!cart || cart.length === 0) {
+      return 0;
+    }
+    return cart.reduce((sum, item) => sum + (item.stock * item.Price), 0);
+  };
+
+  useEffect(() => {
+    setTotal(calculateTotal(cart));
+  }, [cart]);
 
 
-      useEffect(() => {
-  setSelectedCategory("Store");
-}, []);
+  useEffect(() => {
+    setSelectedCategory("Store");
+  }, []);
 
 
   return (
@@ -729,21 +729,21 @@ const Orders = () => {
 
                 {/* Buttons */}
                 {/* Buttons */}
-         <div className="flex flex-wrap justify-center items-center gap-2 mb-2">
-  <button
-    className={`font-bold py-1 px-3 rounded-xl text-xs my-1 sm:text-sm
+                <div className="flex flex-wrap justify-center items-center gap-2 mb-2">
+                  <button
+                    className={`font-bold py-1 px-3 rounded-xl text-xs my-1 sm:text-sm
       transition-all duration-200
       ${selectedCategory === "Store"
-        ? "bg-blue-600 text-white shadow-md"
-        : theme === "Dark"
-          ? "bg-gray-700 text-white"
-          : "bg-white text-gray-800 border border-gray-300 shadow-sm hover:shadow-md hover:bg-gray-100"
-      }`}
-    onClick={() => setSelectedCategory("Store")}
-  >
-    Store
-  </button>
-</div>
+                        ? "bg-blue-600 text-white shadow-md"
+                        : theme === "Dark"
+                          ? "bg-gray-700 text-white"
+                          : "bg-white text-gray-800 border border-gray-300 shadow-sm hover:shadow-md hover:bg-gray-100"
+                      }`}
+                    onClick={() => setSelectedCategory("Store")}
+                  >
+                    Store
+                  </button>
+                </div>
 
               </div>
 
