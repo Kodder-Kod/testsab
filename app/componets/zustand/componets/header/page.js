@@ -2,7 +2,7 @@
 
 import { FaUser, FaTerminal, FaClock, FaMoneyBillWave, FaReceipt, FaFileInvoiceDollar, FaExclamationCircle } from "react-icons/fa";
 import { ref, onValue } from "firebase/database";
-import { db } from "../../../config";
+import { db } from "../../../../../config";
 import React, { useState, useEffect, useCallback } from 'react';
 import { useUserItems, useUserItemsData, useUserItemsTotal } from "@/app/componets/zustand/items";
 import { useUserEmployee, useUserEmployeeTotal } from "@/app/componets/zustand/employees";
@@ -11,8 +11,7 @@ import { useUserSupplier, useUserSupplierTotal } from "@/app/componets/zustand/s
 import { useUserSupplyItems, useUserSupplyItemsData, useUserSupplyItemsTotal } from "@/app/componets/zustand/supplyItems";
 import { useUserCart, useUserCartData, useUserCartTotal } from "@/app/componets/zustand/cart";
 import { useUserTicket, useUserTicketData, useUserTicketTotal } from "@/app/componets/zustand/ticket";
-import { useUserRoomCategories, useUserRoomCategoriesTotal } from "@/app/componets//zustand/roomCategories";
-import { useUserRoom, useUserRoomData, useUserRoomTotal } from "@/app/componets/zustand/room";
+
 import { useUserID, useUserName, useUserRole } from "@/app/componets/zustand/profile";
 import { useUserLogs, useUserLogsData, useUserLogsTotal } from "@/app/componets/zustand/logs";
 import Dashboard from "@/app/allpages/dashboard/page";
@@ -32,13 +31,12 @@ import {
 } from 'react-icons/fa';
 import Debt from "@/app/allpages/debt/page";
 import Profile from "@/app/allpages/profile/page";
-import Kitchen from "@/app/allpages/kitchen/page";
+
 import Expenses from "@/app/allpages/expenses/page";
-import Accommodation from "@/app/allpages/accommodation/page";
-import { useUserReserved, useUserReservedData, useUserReservedTotal } from "@/app/componets/zustand/reserve";
-import { useUserCheckoutList, useUserCheckoutListData, useUserCheckoutListTotal } from "@/app/componets/zustand/checkoutList";
+
+
 import { useUserOrders, useUserOrdersData, useUserOrdersTotal } from "@/app/componets/zustand/orders";
-import { useUserConsumed, useUserConsumedData, useUserConsumedTotal } from "../zustand/consumed";
+
 import { useUserExpenses, useUserExpensesData, useUserExpensesTotal } from "../zustand/expenses";
 import { useUserExpensesCategories, useUserExpensesCategoriesData, useUserExpensesCategoriesTotal } from "../zustand/expenseCategories";
 
